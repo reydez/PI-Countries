@@ -1,0 +1,40 @@
+.cardContainer {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  max-width: 350px;
+  margin: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.close button {
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 20%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.close button:focus {
+  outline: none;
+}
+
+.countryDataContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.countryDataContainer img {
+  background: linear-gradient(to right, #ff5353 0%, #f6f6f6 100%);
+  object-fit: cover;
+  width: 5em;
+}
