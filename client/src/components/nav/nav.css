@@ -1,0 +1,21 @@
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(80, 80, 80);
+  padding: 0.25rem;
+}
+
+.logoHenry img {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .navContainer {
+    flex-direction: column;
+  }
+  .logoHenry img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}

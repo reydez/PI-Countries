@@ -1,25 +1,18 @@
 import React from "react";
 import "./countryCard.css";
+import { Link } from "react-router-dom";
 
-const CountryCard = ({
-  name,
-  flag,
-  continent,
-  capital,
-  subregion,
-  area,
-  population,
-}) => {
+const CountryCard = ({ ID, name, flag }) => {
   return (
-    <div className="cardContainer">
-      <div className="countryDataContainer">
-        <img src={flag} alt="Bandera de pais" className="" />
-        <span>{name}</span>
-        <span>{continent}</span>
-        <span>{capital}</span>
-        <span>{subregion}</span>
-        <span>{area}</span>
-        <span>{population}</span>
+    <div className="card card-shadow">
+      <div className="card-header card-image">
+        <img src={flag} alt="Bandera de pais" />
+      </div>
+      <div className="card-body">{name}</div>
+      <div className="card-footer">
+        <Link to={`/country/${ID}`}>
+          <button className="btn">Detalles de País</button>
+        </Link>
       </div>
     </div>
   );

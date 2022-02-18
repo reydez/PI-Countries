@@ -1,0 +1,39 @@
+.searchBarContainer {
+  display: flex;
+  padding: 0rem;
+  justify-content: center;
+}
+
+.searchBarContainer input {
+  margin-right: 10px;
+  border: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.searchBarContainer input:focus {
+  outline: none;
+}
+
+.searchBarContainer input:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.searchBarContainer button {
+  background: rgb(230, 255, 1);
+  border: none;
+  color: black;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.searchBarContainer button:focus {
+  outline: none;
+}
+
+.searchBarContainer button:hover {
+  outline: none;
+  background: rgb(235, 247, 180);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}

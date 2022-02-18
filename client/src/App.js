@@ -8,7 +8,6 @@ import Activity from "./components/activity/activity";
 function App() {
   return (
     <div className="App">
-      <h1>Henry Countries</h1>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/countries" element={<Countries />} />
