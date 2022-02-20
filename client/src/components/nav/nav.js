@@ -13,6 +13,17 @@ const Nav = () => {
         </Link>
       </div>
       <SearchBar />
+      <div>
+        {/* Botones/Opciones para filtrar por continente y por tipo de actividad
+        turística */}
+      </div>
+      <div>
+        {/* Botones/Opciones para ordenar tanto ascendentemente como
+        descendentemente los países por orden alfabético y por cantidad de
+        población */}
+      </div>
+      {/* Paginado para ir buscando y mostrando los siguientes paises, 10 paises por
+      pagina, mostrando los primeros 9 en la primer pagina. */}
     </div>
   );
 };

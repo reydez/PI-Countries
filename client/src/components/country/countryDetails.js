@@ -32,7 +32,7 @@ const CountryDetails = () => {
             <h6>Populación: {countryDetail.population}</h6>
           </div>
           <div className="actividades">
-            <h5>ACTIVIDATES</h5>
+            <h5>ACTIVIDADES DE PAÍS</h5>
             <CountryActivities activities={countryDetail.activities} />
           </div>
         </div>

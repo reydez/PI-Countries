@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./landingPage.css";
 
 const LandingPage = () => {
   return (
-    <div>
-      landing page component
-      <Link to="/countries">Get started</Link>
+    <div className="landing-conteiner">
+      <div className="landing-details">
+        <h1>Henry Countries</h1>
+        <Link to="/countries">
+          <button type="submit">Empezar</button>
+        </Link>
+      </div>
     </div>
   );
 };

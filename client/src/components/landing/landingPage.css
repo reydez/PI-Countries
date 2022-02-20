@@ -1,0 +1,42 @@
+.landing-conteiner {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(150, 150, 150);
+  background-image: url("./countries.png");
+  background-size: cover;
+  position: absolute;
+}
+
+.landing-details {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-conteiner h1 {
+  width: fit-content;
+  background: rgb(230, 255, 1);
+  border: none;
+  color: black;
+  padding: 0.7em 1em;
+  border-radius: 0.25em;
+  font-size: 3rem;
+}
+
+.landing-conteiner button {
+  background: rgb(230, 255, 1);
+  border: none;
+  color: black;
+  padding: 0.7em 1em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.landing-conteiner button:hover {
+  background: rgb(236, 248, 124);
+}
