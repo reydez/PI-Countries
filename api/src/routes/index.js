@@ -55,7 +55,8 @@ router.get("/countries/:idPais", (req, res) => {
 });
 
 router.post("/activity", (req, res) => {
-  Activity.create(
+  console.log(req.body);
+  /* Activity.create(
     {
       nombre: req.body.nombre,
       dificultad: req.body.dificultad,
@@ -65,7 +66,7 @@ router.post("/activity", (req, res) => {
     {
       include: [Country],
     }
-  );
+  ); */
   res.status(200).json({ msg: "Actividad registrada correctamente" });
 });
 

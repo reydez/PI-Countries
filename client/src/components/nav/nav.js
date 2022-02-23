@@ -24,6 +24,11 @@ const Nav = () => {
       </div>
       {/* Paginado para ir buscando y mostrando los siguientes paises, 10 paises por
       pagina, mostrando los primeros 9 en la primer pagina. */}
+      <div className="agregarActividades">
+        <Link to="/activity">
+          <button type="submit">Agregar Actividades</button>
+        </Link>
+      </div>
     </div>
   );
 };

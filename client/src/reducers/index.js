@@ -1,9 +1,9 @@
-import { GET_COUNTRIES, GET_COUNTRY_DETAILS } from "../types";
+import { GET_COUNTRIES, GET_COUNTRY_DETAILS, ADD_ACTIVITY } from "../types";
 
 const initialState = {
   countries: [],
   country: {},
-  loading: true,
+  activity: {},
 };
 
 function rootReducer(state = initialState, action) {
@@ -12,12 +12,16 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         countries: action.payload,
-        loading: false,
       };
     case GET_COUNTRY_DETAILS:
       return {
         ...state,
         country: action.payload,
+      };
+    case ADD_ACTIVITY:
+      return {
+        ...state,
+        activity: action.payload,
       };
     default:
       return state;

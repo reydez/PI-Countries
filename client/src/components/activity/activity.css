@@ -1,0 +1,231 @@
+.activity {
+  --padding: 1rem;
+  background: rgb(80, 80, 80);
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  left: 87%;
+  top: 1%;
+}
+
+.backButton button {
+  background: rgb(230, 255, 1);
+  border: none;
+  color: black;
+  padding: 0.3em 0.55em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.backButton button:hover,
+.backButton button:focus {
+  outline: none;
+  background: rgb(235, 247, 180);
+}
+
+.activity.activity-shadow {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 1000px;
+  max-height: 320px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.formTitle {
+  margin: 0;
+  margin-top: 1rem;
+  color: white;
+}
+
+.formTitle:hover {
+  margin: 0;
+  margin-top: 1rem;
+  color: rgb(235, 247, 180);
+}
+
+.activityFormContainer label {
+  margin-right: 0.9rem;
+  color: white;
+}
+
+.activityFormContainer input {
+  margin-top: 1rem;
+}
+
+.activityFormContainer select {
+  margin-top: 1rem;
+}
+
+form {
+  display: grid;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+form label {
+  text-align: right;
+}
+
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+
+.inputText {
+  padding: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+select {
+  padding: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+form button {
+  background: rgb(230, 255, 1);
+  padding: 0.5em 0.75em;
+  width: 50%;
+  margin-top: 0.6rem;
+  border: none;
+  color: black;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+form button:hover {
+  outline: none;
+  background: rgb(235, 247, 180);
+}
+
+label {
+  grid-column: 1 / 2;
+}
+
+input,
+button {
+  grid-column: 2 /3;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.buttonContainer button {
+  background: rgb(230, 255, 1);
+  border: none;
+  color: black;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.searchBarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.searchBarContainer input {
+  padding: 0.2em;
+  margin: 0;
+}
+
+.searchBarContainer button {
+  padding: 0.5em;
+  margin: 0 0.5rem;
+}
+
+.countrySelection {
+  width: 500px;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.6rem 0;
+  border: 1px gray solid;
+  border-radius: 15px;
+  padding: 0.2rem;
+}
+
+ul li span {
+  color: white;
+  overflow: auto;
+}
+
+ul li button {
+  border-radius: 50px;
+  border: none;
+  background: rgb(230, 255, 1);
+  margin: 0 0.8rem;
+  cursor: pointer;
+  max-height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li button:hover {
+  outline: none;
+  cursor: pointer;
+  background: rgb(235, 247, 180);
+}
+
+.countryListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow: auto;
+}
+
+.title1 {
+  margin: 0;
+  margin-top: 0.8rem;
+  color: rgb(230, 255, 1);
+}
+
+.title2 {
+  margin: 0;
+  margin-top: 0.8rem;
+  color: rgb(230, 255, 1);
+}
+
+.addActionContainer {
+  border: #777 1px solid;
+  padding: 0.5rem;
+  margin: 0.7rem 0.5rem;
+  box-shadow: 0px 2px #777;
+  width: 50%;
+  max-height: 240px;
+  overflow: auto;
+}
+
+.addedCountriesContainer {
+  border: #777 1px solid;
+  padding: 0.5rem;
+  margin: 0.7rem 0.5rem;
+  box-shadow: 0px 2px #777;
+  width: 50%;
+  max-height: 240px;
+  overflow: auto;
+}

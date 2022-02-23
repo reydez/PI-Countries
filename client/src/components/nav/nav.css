@@ -1,13 +1,28 @@
 .navContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   background: rgb(80, 80, 80);
   padding: 0.25rem;
 }
 
-.logoHenry img {
-  margin-right: 10px;
+.logoHenry {
+  margin: 0 10px;
+}
+
+.agregarActividades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.agregarActividades button {
+  background: rgb(230, 255, 1);
+  border: none;
+  color: black;
+  padding: 0.3em 0.75em;
+  border-radius: 0.25em;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

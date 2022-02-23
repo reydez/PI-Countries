@@ -3,9 +3,9 @@ import "./searchBar.css";
 
 const SearchBar = () => {
   return (
-    <div className="searchBarContainer">
-      <input type="search" placeholder="Nombre de pais" />
-      <button type="submit">Search</button>
+    <div className="navSearchBarContainer">
+      <input type="search" placeholder="Ingrese nombre de país" />
+      <button type="submit">Buscar</button>
     </div>
   );
 };

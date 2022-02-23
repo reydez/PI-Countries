@@ -1,6 +1,6 @@
 .details {
   --padding: 1rem;
-  background: rgb(30, 30, 30);
+  background: rgb(80, 80, 80);
   border: 1px solid #777;
   border-radius: 0.25rem;
 }
@@ -110,7 +110,6 @@
 
 .details-btn:hover,
 .details-btn:focus {
-  background: rgb(230, 255, 1);
   outline: none;
   background: rgb(235, 247, 180);
 }
