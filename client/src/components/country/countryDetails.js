@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import "./countryDetails.css";
 import { getCountryDetails } from "../../actions";
-import CountryActivities from "./countryActivities";
 
 const CountryDetails = () => {
   let { id } = useParams();
@@ -33,7 +32,19 @@ const CountryDetails = () => {
           </div>
           <div className="actividades">
             <h5>ACTIVIDADES DE PAÍS</h5>
-            <CountryActivities activities={countryDetail.activities} />
+            {countryDetail.activities?.length > 0 ? (
+              countryDetail.activities.map((activity) => {
+                return (
+                  <h6>
+                    Nombre: {activity.nombre}, Duración: {activity.duracion},
+                    Dificultad: {activity.dificultad}, Temporada:{" "}
+                    {activity.temporada}
+                  </h6>
+                );
+              })
+            ) : (
+              <h6>El país no tiene actividades</h6>
+            )}
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-const { Router } = require("express");
+const { Router, response } = require("express");
 
 const { Country, Activity, op } = require("../db.js");
 // Importar todos los routers;
@@ -19,7 +19,6 @@ router.get("/countries", (req, res) => {
           [op.iLike]: `${name}%`,
         },
       },
-      include: Activity,
     }).then((response) => {
       if (response.length === 0) {
         return res.status(404).send("El pais no existe");
@@ -27,7 +26,7 @@ router.get("/countries", (req, res) => {
       return res.status(200).json(response);
     });
   } else {
-    Country.findAll({ include: Activity }).then((response) => {
+    Country.findAll().then((response) => {
       return res.status(200).json(response);
     });
   }
@@ -55,18 +54,24 @@ router.get("/countries/:idPais", (req, res) => {
 });
 
 router.post("/activity", (req, res) => {
-  console.log(req.body);
-  /* Activity.create(
-    {
-      nombre: req.body.nombre,
-      dificultad: req.body.dificultad,
-      duracion: req.body.duracion,
-      temporada: req.body.temporada,
-    },
-    {
-      include: [Country],
-    }
-  ); */
+  const { nombre, dificultad, duracion, temporada, paises } = req.body;
+  Activity.create({
+    nombre: nombre,
+    dificultad: dificultad,
+    duracion: duracion,
+    temporada: temporada,
+  })
+    .then((activity) => {
+      paises.forEach((pais) => {
+        Country.findByPk(pais.ID).then((country) => {
+          if (country) activity.addCountry(country);
+        });
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
   res.status(200).json({ msg: "Actividad registrada correctamente" });
 });
 

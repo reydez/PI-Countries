@@ -31,8 +31,18 @@ class Activity extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.addActivity(this.state);
-    this.setResetState();
+    if (this.state.nombre !== "" || this.state.duracion !== "") {
+      this.props.addActivity({
+        nombre: this.state.nombre,
+        dificultad: this.state.dificultad,
+        duracion: this.state.duracion,
+        temporada: this.state.temporada,
+        paises: this.state.paises,
+      });
+      this.setResetState();
+      return;
+    }
+    alert("Algunos campos son necesarios para registrar actividad");
   }
 
   agregarPais(pais) {
@@ -128,7 +138,6 @@ class Activity extends React.Component {
               <option value="invierno">invierno</option>
               <option value="primavera">primavera</option>
             </select>
-
             <button type="submit">Registrar</button>
           </form>
         </div>
@@ -140,10 +149,9 @@ class Activity extends React.Component {
               id="pais"
               value={this.state.pais}
               onChange={this.handleInputChange}
-              onKeyUp={this.buscarPais}
               placeholder="Ingresar nombre de pais"
             />
-            {/* <button>Agregar a la lista</button> */}
+            <button onClick={this.buscarPais}>Buscar</button>
           </div>
           <div className="countryListContainer">
             <div className="addActionContainer">
@@ -177,7 +185,7 @@ class Activity extends React.Component {
                   })
                 ) : (
                   <li>
-                    <span>No hay paises agregados</span>
+                    <span>No existen paises agregados</span>
                   </li>
                 )}
               </ul>

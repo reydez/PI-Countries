@@ -113,3 +113,8 @@
   outline: none;
   background: rgb(235, 247, 180);
 }
+
+.actividades {
+  border: #777 1px solid;
+  border-radius: 15px;
+}
