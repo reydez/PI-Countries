@@ -133,7 +133,7 @@ class Activity extends React.Component {
           </div>
           <div className="countryListContainer">
             <div className="addActionContainer">
-              <h6 className="title1">Agregar país</h6>
+              <h6 className="title1">Paises</h6>
               <ul>
                 {countries.map((country) => {
                   return (
