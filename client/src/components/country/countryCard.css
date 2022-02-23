@@ -4,6 +4,7 @@
   border: 1px solid #777;
   border-radius: 0.25rem;
   overflow: hidden;
+  max-width: 331px;
 }
 
 .card.card-shadow {

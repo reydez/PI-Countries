@@ -16,7 +16,7 @@ router.get("/countries", (req, res) => {
     Country.findAll({
       where: {
         name: {
-          [op.iLike]: `%${name}%`,
+          [op.iLike]: `${name}%`,
         },
       },
       include: Activity,

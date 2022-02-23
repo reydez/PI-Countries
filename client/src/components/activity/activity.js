@@ -13,6 +13,7 @@ class Activity extends React.Component {
       dificultad: "1",
       duracion: "",
       temporada: "verano",
+      pais: "",
       paises: [],
     };
 
@@ -21,6 +22,7 @@ class Activity extends React.Component {
     this.agregarPais = this.agregarPais.bind(this);
     this.quitarPais = this.quitarPais.bind(this);
     this.setResetState = this.setResetState.bind(this);
+    this.buscarPais = this.buscarPais.bind(this);
   }
 
   handleInputChange(event) {
@@ -30,7 +32,6 @@ class Activity extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.addActivity(this.state);
-    console.log(this.state);
     this.setResetState();
   }
 
@@ -53,12 +54,17 @@ class Activity extends React.Component {
       dificultad: "1",
       duracion: "",
       temporada: "verano",
+      pais: "",
       paises: [],
     });
   }
 
   componentDidMount() {
     this.props.getCountries();
+  }
+
+  buscarPais() {
+    this.props.getCountries(this.state.pais);
   }
 
   render() {
@@ -128,7 +134,15 @@ class Activity extends React.Component {
         </div>
         <div className="countrySelection">
           <div className="searchBarContainer">
-            <input type="text" placeholder="Nombre de pais" />
+            <input
+              type="text"
+              name="pais"
+              id="pais"
+              value={this.state.pais}
+              onChange={this.handleInputChange}
+              onKeyUp={this.buscarPais}
+              placeholder="Ingresar nombre de pais"
+            />
             {/* <button>Agregar a la lista</button> */}
           </div>
           <div className="countryListContainer">
@@ -183,7 +197,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    getCountries: () => dispatch(getCountries()),
+    getCountries: (pais) => dispatch(getCountries(pais)),
     addActivity: (body) => dispatch(addActivity(body)),
   };
 }
