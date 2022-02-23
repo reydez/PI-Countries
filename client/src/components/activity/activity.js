@@ -23,15 +23,26 @@ class Activity extends React.Component {
     this.quitarPais = this.quitarPais.bind(this);
     this.setResetState = this.setResetState.bind(this);
     this.buscarPais = this.buscarPais.bind(this);
+    this.nadamasNumeros = this.nadamasNumeros.bind(this);
   }
 
   handleInputChange(event) {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  nadamasNumeros(event) {
+    if (/\D/g.test(event.target.value)) {
+      event.target.value = event.target.value.replace(/\D/g, "");
+    }
+  }
+
   handleSubmit(event) {
     event.preventDefault();
-    if (this.state.nombre !== "" || this.state.duracion !== "") {
+    if (
+      this.state.nombre !== "" &&
+      this.state.duracion !== "" &&
+      this.state.paises.length !== 0
+    ) {
       this.props.addActivity({
         nombre: this.state.nombre,
         dificultad: this.state.dificultad,
@@ -40,6 +51,7 @@ class Activity extends React.Component {
         paises: this.state.paises,
       });
       this.setResetState();
+      alert("Se registro exitosamente");
       return;
     }
     alert("Algunos campos son necesarios para registrar actividad");
@@ -123,6 +135,7 @@ class Activity extends React.Component {
               id="duracion"
               value={this.state.duracion}
               onChange={this.handleInputChange}
+              onKeyUp={this.nadamasNumeros}
               placeholder="Ingresar duración"
             />
 

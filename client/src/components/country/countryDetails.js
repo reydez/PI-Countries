@@ -35,7 +35,7 @@ const CountryDetails = () => {
             {countryDetail.activities?.length > 0 ? (
               countryDetail.activities.map((activity) => {
                 return (
-                  <h6>
+                  <h6 key={activity.ID}>
                     Nombre: {activity.nombre}, Duración: {activity.duracion},
                     Dificultad: {activity.dificultad}, Temporada:{" "}
                     {activity.temporada}

@@ -26,7 +26,7 @@ const Nav = () => {
       pagina, mostrando los primeros 9 en la primer pagina. */}
       <div className="agregarActividades">
         <Link to="/activity">
-          <button type="submit">Agregar Actividades</button>
+          <button type="submit">Registrar Actividades</button>
         </Link>
       </div>
     </div>

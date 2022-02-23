@@ -117,4 +117,7 @@
 .actividades {
   border: #777 1px solid;
   border-radius: 15px;
+  max-width: 220px;
+  max-height: 240px;
+  overflow: auto;
 }
