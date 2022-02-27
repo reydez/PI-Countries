@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .navSearchBarContainer input {
@@ -38,4 +39,46 @@
   background: rgb(235, 247, 180);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
   cursor: pointer;
+}
+
+.porContinente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: #777 1px solid; */
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.porContinente select {
+  margin-right: 10px;
+  margin-bottom: 0;
+  border: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.porContinente button {
+  background: rgb(230, 255, 1);
+  border: none;
+  color: black;
+  padding: 0.3em 0.75em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.sorting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: #777 1px solid; */
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.sorting select {
+  margin-right: 10px;
+  margin-bottom: 0;
+  border: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }

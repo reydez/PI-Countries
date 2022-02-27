@@ -1,4 +1,10 @@
-import { GET_COUNTRIES, GET_COUNTRY_DETAILS, ADD_ACTIVITY } from "../types";
+import {
+  GET_COUNTRIES,
+  GET_COUNTRY_DETAILS,
+  ADD_ACTIVITY,
+  FILTRAR_POR_CONTINENTE,
+  SORT,
+} from "../types";
 
 import axios from "axios";
 
@@ -61,5 +67,21 @@ export function addActivity(body) {
       .catch((error) => {
         console.log(error);
       });
+  };
+}
+
+export function sort(payload) {
+  return {
+    type: SORT,
+    payload,
+  };
+}
+
+export function filtrarContinente(continent) {
+  return function (dispatch) {
+    return dispatch({
+      type: FILTRAR_POR_CONTINENTE,
+      payload: continent,
+    });
   };
 }
